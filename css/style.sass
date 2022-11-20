@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Inconsolata:wght@300&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap')
+
+//  COLORS
+$bg-color: #262626
+$bg-before-color: #000
+$equal-color: #D47271
+$white-color: #fff
+
+body
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    // font-family: 'Roboto', sans-serif
+    font-family: 'Inconsolata', monospace
+.calc
+    background: $bg-color
+    min-width: 300px
+    width: 20%
+    margin: 10% auto
+    min-height: 400px
+    // height: 74vh
+    border-radius: 30px
+    color: $white-color
+    position: relative
+    &::before
+        content: ""
+        position: absolute
+        width: 20%
+        height: 60%
+        background: #000
+        right: 0
+        bottom: 7%
+        border-radius: 50px 0 0 50px
+    .container
+        width: 100%
+        height: 100%
+        .show-info
+            width: 100%
+            text-align: center
+            height: 40%
+            box-sizing: border-box
+            padding: 60px
+            input.input-values
+                font-size: 13px
+                font-style: italic
+                margin-bottom: 10px
+                display: inline-block
+                letter-spacing: 3px
+                background: transparent
+                border: none
+                width: 100%
+                color: #fff
+                text-align: center
+                &::placeholder
+                    color: #fff
+                &:focus
+                    outline: none
+            .input-result
+                font-size: 3rem
+                font-weight: bold
+        .calc-btns
+            position: absolute
+            z-index: 999
+            display: grid
+            grid-template-columns: repeat(4,1fr)
+            column-gap: 35px
+            row-gap: 20px
+            bottom: 5%
+            left: 7%
+            // width: 80%
+            button
+                width: 40px
+                height: 40px
+                border-radius: 50%
+                border: none
+                color: $white-color
+                background: $bg-color
+                box-shadow: 0 0 5px rgba(0,0,0,0.4)
+                cursor: pointer
+                transition: 0.3s
+                &:active
+                    transform: scale(0.89)
+            button.equal
+                background: $equal-color
+                transform: scale(1.2)
+                &:active
+                    transform: scale(0.89)
+
+@import media
